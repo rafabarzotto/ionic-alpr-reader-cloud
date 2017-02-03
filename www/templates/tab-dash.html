@@ -1,0 +1,20 @@
+<ion-view view-title="Dashboard">
+    <ion-content ng-controller="DashCtrl">
+        <div class="card">
+            <div class="item item-divider">
+                Imagem
+            </div>
+            <div class="item item-text-wrap">
+                <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" height="320" width="320">
+            </div>
+        </div>
+        <div class="card">
+        <div class="button-bar">
+            <a class="button button-positive icon ion-camera" ng-click="take()"></a>
+            <a class="button button-assertive icon ion-images" ng-click="choosePhoto()"></a>
+            <a class="button button-balanced icon ion-checkmark" ng-click="uploadFiles()" ng-disabled="!imgURI"></a>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>
+
